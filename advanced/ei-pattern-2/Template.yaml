@@ -8430,6 +8430,22 @@ objects:
       kind: Service
       name: wso2ei-pattern-2-mb-service
 
+# Route wso2ei-analytics-dashboard-ingress
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    name: wso2ei-analytics-dashboard-ingress
+  spec:
+    host: wso2ei-analytics-dashboard.${OPENSHIFT_BASE_DOMAIN}
+    port:
+      targetPort: https
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: passthrough
+    to:
+      kind: Service
+      name: wso2ei-pattern-2-analytics-dashboard-service
+
 parameters:
 - name: OPENSHIFT_PROJECT_NAME
   displayName: Name of the OpenShift project
