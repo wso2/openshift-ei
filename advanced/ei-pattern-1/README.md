@@ -28,7 +28,7 @@
 
 4. Access product management consoles. Obtain the (HOST/PORT) of the route resource.
 
-   `oc get route -n <NAMESPACE>`
+   `oc get route -n <PROJECT_NAME>`
 	
 Try navigating to `https://<RELEASE_NAME>-integrator/carbon` and `https://<RELEASE_NAME>-analytics-dashboard/portal` from your favorite browser.
 
